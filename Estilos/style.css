@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-html{
+/* html{
     font-size: 62.5%;
-}
+} */
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #12121f;
     color: #eee;
     display: flex;
@@ -46,7 +46,10 @@ html{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 3rem;
-    letter-spacing: .3rem;
+}
+
+.date p{
+    margin-top: 0.6rem;
 }
 
 .weekdays{
@@ -58,9 +61,43 @@ html{
 }
 
 .weekdays div{
-    font: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: .1rem;
     width: calc(44.2rem/7);
     text-align: center;
+}
+
+.days{
+    width: 100%;
+    height: 35rem;
+    padding: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days div{
+    width: calc(44.2rem/7);
+    height: 5rem;
+    text-align: center;
+    transition: background-color .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days div:hover:not(.today){
+    background-color: #262626;
+    outline: .2rem solid #777;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, .4);
+}
+
+.prev-date, .next-date{
+    opacity: .5;
+}
+
+.today{
+    background-color: #167e56;
+    outline: .2rem solid #777;
 }
