@@ -101,3 +101,42 @@
     background-color: #167e56;
     outline: .2rem solid #777;
 }
+
+/* Responsive */
+
+@media  screen and (max-width: 786px){
+    .calendar{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .month{
+        height: 8rem;
+        padding: 0;
+    }
+
+    .date h1{
+        font-size: 1rem;
+    }
+
+    .weekdays{
+        height: 4rem;
+    }
+
+    .weekdays div{
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .days{
+        height: 29rem;
+        width: auto;
+        padding: 0 0.2;
+    }
+
+    .days div{
+        width: calc(22.2rem/7);
+        height: 3rem;
+        height: none;
+    }
+}
